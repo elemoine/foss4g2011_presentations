@@ -1,1 +1,63 @@
-My GitHub Page
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="imakewebthings-deck.js-bb4870a/core/deck.core.css">
+    <link rel="stylesheet" href="imakewebthings-deck.js-bb4870a/extensions/navigation/deck.navigation.css">
+
+    <link rel="stylesheet" href="imakewebthings-deck.js-bb4870a/themes/style/swiss.css">
+    <link rel="stylesheet" href="imakewebthings-deck.js-bb4870a/themes/transition/horizontal-slide.css">
+
+    <style>
+    ul.authors {
+        position: absolute;
+        top: 75%;
+    }
+    ul.authors li {
+        display: inline;
+        font-size: 2.25em;
+        font-weight: bold;
+        color: #CC0000;
+    }
+    </style>
+
+    <script src="imakewebthings-deck.js-bb4870a/modernizr.custom.js"></script>
+</head>
+
+<body class="deck-container">
+        <div class="slide">
+            <h1>OpenLayers Mobile</h1>
+            <ul class="authors">
+                <li>Tim Schaub (OpenGeo),</li>
+                <li>Eric Lemoine (Camptocamp)</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>Lausanne Code Sprint</h2>
+            <img src="code_sprint.jpg" alt="sprinters">
+            <!--
+            - 6-day code sprint in february
+            - 15 sponsors
+            - 15 developers from various companies
+            - developers working on OL core stuff, others on
+              combining OL with mobile-specific UI toolkits
+            -->
+        </div>
+
+        <div>
+        </div>
+</body>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.js"></script>
+<script src="imakewebthings-deck.js-bb4870a/core/deck.core.js"></script>
+<script src="imakewebthings-deck.js-bb4870a/extensions/navigation/deck.navigation.js""></script>
+<script>
+    $(function() {
+        $.deck('.slide');
+    });
+</script>
+
+</html>
