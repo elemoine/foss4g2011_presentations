@@ -21,6 +21,13 @@
         font-weight: bold;
         color: #CC0000;
     }
+    .csstransitions.csstransforms .deck-container:not(.deck-menu) > .slide .deck-next, .csstransitions.csstransforms .deck-container:not(.deck-menu) > .slide .deck-after {
+        -webkit-transform: translate3d(10000%, 0, 0);
+        -moz-transform: translate(10000%, 0);
+        -ms-transform: translate(10000%, 0);
+        -o-transform: translate(10000%, 0);
+        transform: translate3d(10000%, 0, 0);
+}
     </style>
 
     <script src="imakewebthings-deck.js-bb4870a/modernizr.custom.js"></script>
@@ -47,6 +54,36 @@
             -->
         </div>
 
+        <div class="slide">
+            <h2>What's there now?</h2>
+            <p>New controls and handlers:</p>
+            <pre><span class="slide">OpenLayers.Handler.Pinch</span><span class="slide">, OpenLayers.Control.PinchZoom</span><span class="slide">, OpenLayers.Control.TouchNavigation</span><span class="slide">, OpenLayers.Control.Geolocate</span></pre>
+            <p>Touch support in existing controls and handlers:</p>
+            <pre><span class="slide">OpenLayers.Handler.Drag</span><span class="slide">, OpenLayers.Handler.Click</span><span class="slide">, OpenLayers.Handler.Point|Path|Polygon</span><span class="slide">, OpenLayers.Handler.Feature</span><span class="slide">, OpenLayers.Control.Navigation</span><span class="slide">, OpenLayers.Control.PanZoomBar</span><span class="slide">, OpenLayers.Control.DragFeature</span></pre>
+            </pre>
+        </div>
+
+        <div class="slide">
+            <h2>Current debates</h2>
+            <p><em>One Web</em>?</p>
+            <p><em>Responsive Web Design</em>?</p>
+            <p>Lots of debates, still unclear...<p>
+            <p>OpenLayers provides both
+            <ul>
+                <li>touch-specific controls</li>
+                <li>and controls that work with the mouse and touches</li>
+            </ul>
+
+            <!--
+            - Responsive Web Design == serving up content at a URL to the best
+              ability of the device
+            - people can build apps that work both on desktop and mobile browsers
+            - people can build mobile-specific apps
+            -->
+
+            <!--
+            http://www.w3.org/TR/mwabp/
+            -->
         <div>
         </div>
 </body>
