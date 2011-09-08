@@ -39,7 +39,7 @@
         <div class="slide">
             <h2>Lausanne Code Sprint</h2>
             <img src="code_sprint.jpg" alt="sprinters">
-            <!--
+            <!-- Speaker notes:
             - 6-day code sprint in february
             - 15 sponsors
             - 15 developers from various companies
@@ -53,14 +53,21 @@
             <p>Touch events support across the library!</p>
             <ul>
                 <li>Pan and zoom the map</li>
+                <!-- Speaker notes:
+                - zoom in/out with pinch supported
+                -->
                 <li>Draw, select, drag, and modify vector features</li>
                 <li>Geolocation</li>
             </ul>
-            <p>Increased performance, and improved UX (kinetic dragging).</p>
-            <p>Check out <a href='http://www.openlayers.com/dev/examples'>http://www.openlayers.com/dev/examples</a></p>
-            <!--
-            - zoom in/out with pinch supported
-            -->
+            <p>More advances:
+            <ul>
+                <li>Increased pan performance</li>
+                <!-- Speaker notes:
+                - avoid pixel to geo coords conversions
+                -->
+                <li>Improved User Experience (kinetic dragging)</li>
+                <li>Reduced library size</li>
+            <ul>
         </div>
 
         <div class="slide">
@@ -91,7 +98,7 @@ OpenLayers.Control.DragFeature</pre>
                 <li>controls that work with both the mouse and touches</li>
             </ul>
 
-            <!--
+            <!-- Speaker notes:
             - Responsive Web Design == serving up content at a URL to the best
               ability of the device
             - people can build apps that work both on desktop and mobile browsers
@@ -102,6 +109,44 @@ OpenLayers.Control.DragFeature</pre>
             <!--
             http://www.w3.org/TR/mwabp/
             -->
+        </div>
+
+        <div class="slide">
+            <h2>Web Mobile Development</h2>
+            <p>... is hard!</p>
+            <p>Designing UIs is harder</p>
+               <ul>
+                   <li>Screens are smaller</li>
+                </ul>
+            </p>
+            <!-- Speaker notes:
+            - two viewports: visual viewport and layout viewport
+            - try hiding the address bar!
+            -->
+            <p>Debugging is much harder
+                <ul>
+                    <li>No debugger</li>
+                    <li>No good emulator for Android</li>
+                    <li>Have a look at <a href='http://jsconsole.log'>jsconsole</a></li>
+                    <li>And at <a href='https://github.com/tschaub/Node.js-Remote-Console.log'>remote_console</a></li>
+                    <li>The future: remote debugging</li>
+                </ul>
+            </p>
+            <p>Developing fast apps is harded
+                <ul>
+                    <li>CPU, memory and network resources are limited</li>
+                    <!-- Speaker notes:
+                    - smaller js builds
+                    - smaller tiles
+                    -->
+                </ul>
+            </p>
+        </div>
+
+        <div class="slide">
+            <h2>But it is fun...</h2>
+            <img src="bye_ie.jpg" alt="goodbye IE6">
+            <img src="css3.jpg" alt="CSS3">
         </div>
 
         <form action="." method="get" class="goto-form">
