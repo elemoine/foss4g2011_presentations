@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="imakewebthings-deck.js-bb4870a/core/deck.core.css">
     <link rel="stylesheet" href="imakewebthings-deck.js-bb4870a/extensions/navigation/deck.navigation.css">
+    <link rel="stylesheet" href="imakewebthings-deck.js-bb4870a/extensions/goto/deck.goto.css">
 
     <link rel="stylesheet" href="imakewebthings-deck.js-bb4870a/themes/style/swiss.css">
     <link rel="stylesheet" href="imakewebthings-deck.js-bb4870a/themes/transition/horizontal-slide.css">
@@ -13,21 +14,14 @@
     <style>
     ul.authors {
         position: absolute;
-        top: 75%;
+        top: 70%;
     }
     ul.authors li {
-        display: inline;
+        display: inline-block;
         font-size: 2.25em;
         font-weight: bold;
         color: #CC0000;
     }
-    .csstransitions.csstransforms .deck-container:not(.deck-menu) > .slide .deck-next, .csstransitions.csstransforms .deck-container:not(.deck-menu) > .slide .deck-after {
-        -webkit-transform: translate3d(10000%, 0, 0);
-        -moz-transform: translate(10000%, 0);
-        -ms-transform: translate(10000%, 0);
-        -o-transform: translate(10000%, 0);
-        transform: translate3d(10000%, 0, 0);
-}
     </style>
 
     <script src="imakewebthings-deck.js-bb4870a/modernizr.custom.js"></script>
@@ -37,7 +31,7 @@
         <div class="slide">
             <h1>OpenLayers Mobile</h1>
             <ul class="authors">
-                <li>Tim Schaub (OpenGeo),</li>
+                <li>Tim Schaub (OpenGeo)</li>
                 <li>Eric Lemoine (Camptocamp)</li>
             </ul>
         </div>
@@ -63,6 +57,7 @@
                 <li>Geolocation</li>
             </ul>
             <p>Increased performance, and improved UX (kinetic dragging).</p>
+            <p>Check out <a href='http://www.openlayers.com/dev/examples'>http://www.openlayers.com/dev/examples</a></p>
             <!--
             - zoom in/out with pinch supported
             -->
@@ -71,17 +66,24 @@
         <div class="slide">
             <h2>Controls and Handlers</h2>
             <p>New:</p>
-            <pre>OpenLayers.Handler.Pinch, OpenLayers.Control.PinchZoom, OpenLayers.Control.TouchNavigation</pre>
-            <pre>OpenLayers.Control.Geolocate</pre>
+            <pre>OpenLayers.Handler.Pinch
+OpenLayers.Control.PinchZoom
+OpenLayers.Control.TouchNavigation
+OpenLayers.Control.Geolocate</pre>
             <p>Extended:</p>
-            <pre>OpenLayers.Handler.Drag, OpenLayers.Handler.Click, OpenLayers.Handler.Point|Path|Polygon, OpenLayers.Handler.Feature</pre>
-            <pre>OpenLayers.Control.Navigation, OpenLayers.Control.PanZoomBar, OpenLayers.Control.DragFeature</pre>
+            <pre>OpenLayers.Handler.Drag
+OpenLayers.Handler.Click
+OpenLayers.Handler.Point|Path|Polygon
+OpenLayers.Handler.Feature
+OpenLayers.Control.Navigation
+OpenLayers.Control.PanZoomBar
+OpenLayers.Control.DragFeature</pre>
             </pre>
         </div>
 
         <div class="slide">
             <h2>Design choice</h2>
-            <p><em>One Web</em>? <em>Responsive Web Design</em>?</p>
+            <p><em>One Web</em>? <a href='http://www.alistapart.com/articles/responsive-web-design/'><em>Responsive Web Design</em></a>?</p>
             <p>Still unclear...<p>
             <p>OpenLayers isn't opinionated, OpenLayers provides both
             <ul>
@@ -100,13 +102,20 @@
             <!--
             http://www.w3.org/TR/mwabp/
             -->
-        <div>
         </div>
+
+        <form action="." method="get" class="goto-form">
+            <label for="goto-slide">Go to slide:</label>
+
+            <input type="number" name="slidenum" id="goto-slide">
+            <input type="submit" value="Go">
+        </form>
 </body>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.js"></script>
 <script src="imakewebthings-deck.js-bb4870a/core/deck.core.js"></script>
 <script src="imakewebthings-deck.js-bb4870a/extensions/navigation/deck.navigation.js""></script>
+<script src="imakewebthings-deck.js-bb4870a/extensions/goto/deck.goto.js""></script>
 <script>
     $(function() {
         $.deck('.slide');
