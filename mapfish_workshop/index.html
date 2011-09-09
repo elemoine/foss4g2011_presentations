@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>MapFish In Production</title>
+	
+	<meta name="description" content="Slides for the MapFish In Production Workshop">
+	<meta name="author" content="Eric Lemoine">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+	
+	<!-- Core and extension CSS files -->
+	<link rel="stylesheet" href="../deckjs/core/deck.core.css">
+	<link rel="stylesheet" href="../deckjs/extensions/goto/deck.goto.css">
+	<link rel="stylesheet" href="../deckjs/extensions/menu/deck.menu.css">
+	<link rel="stylesheet" href="../deckjs/extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="../deckjs/extensions/hash/deck.hash.css">
+	
+	<!-- Theme CSS files (menu swaps these out) -->
+	<link rel="stylesheet" id="style-theme-link" href="../c2c_theme/style/camptocamp.css">
+	<link rel="stylesheet" id="transition-theme-link" href="../c2c_theme/transition/horizontal-slide.css">
+	
+	<!-- Custom CSS just for this page -->
+	<!--<link rel="stylesheet" href="mapfish.css">-->
+	
+	<script src="../deckjs/modernizr.custom.js"></script>
+</head>
+
+<body class="deck-container">
+
+<div class="slide" id="title">
+	<h1>MapFish In Production</h1>
+</div>
+
+<div class="slide" id="camptocamp">
+	<h2>Camptocamp</h2>
+    <img src="c2c-organisation.png"/>
+</div>
+
+<div class="slide" id="goal">
+	<h2>Goal</h2>
+    <p>Show one way to develop production-level MapFish applications.</p>
+    <!--
+    - MapFish is a framework for developing web-mapping applications.
+    - There are many ways to develop and deploy MapFish applications.
+    - This workshops shows the Camptocamp way.
+    - The tools we use, the good practises we apply.
+    -->
+</div>
+
+<div class="slide" id="organization">
+    <h2>Organization</h2>
+    <h3>Workshop document</h3>
+    <ul>
+        <li>http://mapfish/mapfish_workshop (in the vm)</li>
+        <li>http://www.mapfish.org/doc/tutorials/mapfishsample-workshop/index.html</li>
+        <!--
+        The document that you will follow in this workshop.
+        -->
+    </ul>
+    <h3>Five modules</h3>
+    <ul>
+        <li>Getting Started</li>
+        <!-- Setting up your working env -->
+        <li>Understanding MapFish</li>
+        <!-- A practical introduction to MapFish, to show you what
+             MapFish actually is and provides -->
+        <li>Installing and Running MapFishSample</li>
+        <!-- 
+        - MapFishSample is the MapFish application you'll be working
+          with in this workshop.
+        - This module shows how to install and run MapFishSample. You'll see that
+          there are multiple ways to execute MapFish applications.
+        - One way is to use Apache.
+        -->
+        <li>Studying MapFishSample</li>
+        <!--
+        - Deeper study of MapFishSample.
+        - How the application itself works with other modules (the map
+          engine, the tile caching system, etc.)
+        -->
+        <li>Securing MapFishSample</li>
+        <!--
+        - Actual applications often require some sort of security and
+          access control.
+        - This section shows how we secure MapFish applications.
+        -->
+    </ul>
+    <p>Modules include explanations and tasks.</p>
+    <!--
+    - Tasks basically involve entering commands, and editing files.
+    - There are also a fex bonus tasks, for people who go fast.
+    - You'll be working with the MapFishSample application, which
+      the demo app for MapFish.
+    - This document also represents a guide for the MapFishSample
+      application.
+    - I'll provide explanations, answer questions, and Frederic
+      will do the tasks at the same time as you.
+    - You can ask questions at any time.
+    - We have time so we can take our time.
+    -->
+</div>
+
+<div class="slide" id="getting_started">
+	<h2>Getting Started</h2>
+    <p>Goal: setting up your working environment.</p>
+</div>
+
+<div class="slide" id="understanding_mapfish">
+    <h2>Understanding MapFish</h2>
+    <p>Goal: a practical introduction to MapFish, to know what MapFish is
+    and provides.</p>
+    <p>
+    <ul>
+        <li>Install MapFish</li>
+        <li>Create a MapFish app</li>
+        <li>Create a MapFish web service</li>
+        <li>Understand the MapFish protocol</li>
+    <ul>
+    </p>
+</div>
+
+<div class="slide" id="installing_and_running_mapfishsample">
+    <h2>Installing and Running MapFishSample</h2>
+    <p>Goal: know how to install and execute MapFishSample, and get to know about
+    the tools we use for building, deployment, and execution.</p>
+    <p>
+    <ul>
+        <li>Download MapFishSample</li>
+        <li>Build and Deploy MapFishSample</li>
+        <li>Run MapFishSample</li>
+        <li>Play with MapFishSample</li>
+    </ul>
+    </p>
+    <p><a href='http://demo.mapfish.org/mapfishsample/2.2'>http://demo.mapfish.org/mapfishsample/2.2</a></p>
+</div>
+
+<div class="slide" id="studying_mapfishsample">
+    <h2>Studying MapFishSample</h2>
+    <p>Goal: understand how MapFishSample is structured, and how it is connected
+    to external components (MapServer, MapFish Print).</p>
+    <p>
+    <ul>
+        <li>General Structure</li>
+        <li>Source Code Organization</li>
+        <li>Modify The Client Code</li>
+        <!-- JS build -->
+        <li>MapServer</li>
+        <!-- How MapFishSample interacts with MapServer -->
+        <li>Print</li>
+        <!-- How MapFishSample interacts with MapFish Print -->
+        <li>TileCache</li>
+        <!-- How to set up TileCache in MapFishSample -->
+    </ul>
+    </p>
+</div>
+
+<div class="slide" id="securing_mapfishsample">
+    <h2>Securing MapFishSample</h2>
+    <p>Goal: show how to control access to MapFishSample services, and
+    external services.</p>
+    <p>
+    <ul>
+        <li>Create User Model</li>
+        <li>Set up Authentication</li>
+        <li>Secure Application</li>
+        <li>Secure MapFish Web Services</li>
+        <li>Secure MapServer</li>
+    </ul>
+    </p>
+</div>
+
+<div class="slide" id="contact">
+	<h2>Contact</h2>
+	<p>
+		<h4>Camptocamp SA</h4>
+		<address>
+			PSE-A<br/>
+			Parc Scientific EPFL<br/>
+			1015 Lausanne<br/>
+			Switzerland
+		</address>
+		<a href="http://www.camptocamp.com/">www.camptocamp.com</a><br/>
+		<a href="email:info@camptocamp.com">info@camptocamp.com</a><br/>
+		<a class="tel" href="tel:+41216191010">+41 21 619 10 10</a>
+	</p>
+	<p>
+		<h4>Eric Lemoine</h4>
+		<a href="email:eric.lemoine@camptocamp.com">eric.lemoinecamptocamp.com</a><br/>
+	</p>
+	<p>
+        <h4>Frederic Junod</h4>
+        <a href="email:frederic.junod@camptocamp.com">frederic.junod@camptocamp.com</a></br/>
+	</p>
+</div>
+
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<form action="." method="get" class="goto-form">
+	<label for="goto-slide">Go to slide:</label>
+	<input type="number" name="slidenum" id="goto-slide">
+	<input type="submit" value="Go">
+</form>
+
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.js"></script>
+<script>window.jQuery || document.write('<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.1.min.js">\x3C/script>')</script>
+
+<!-- Deck Core and extensions -->
+<script src="../deckjs/core/deck.core.js"></script>
+<script src="../deckjs/extensions/menu/deck.menu.js"></script>
+<script src="../deckjs/extensions/goto/deck.goto.js"></script>
+<script src="../deckjs/extensions/navigation/deck.navigation.js"></script>
+<script src="../deckjs/extensions/hash/deck.hash.js"></script>
+
+<!-- Specific to this page -->
+<script src="mapfish.js"></script>
+
+</body>
+</html>
