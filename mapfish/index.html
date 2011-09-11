@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>MapFish</title>
+	
+	<meta name="description" content="MapFish Presentation">
+	<meta name="author" content="Eric Lemoine">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+	
+	<!-- Core and extension CSS files -->
+	<link rel="stylesheet" href="../deckjs/core/deck.core.css">
+	<link rel="stylesheet" href="../deckjs/extensions/goto/deck.goto.css">
+	<link rel="stylesheet" href="../deckjs/extensions/menu/deck.menu.css">
+	<link rel="stylesheet" href="../deckjs/extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="../deckjs/extensions/hash/deck.hash.css">
+	
+	<!-- Theme CSS files (menu swaps these out) -->
+	<link rel="stylesheet" id="style-theme-link" href="../c2c_theme/style/camptocamp.css">
+	<link rel="stylesheet" id="transition-theme-link" href="../c2c_theme/transition/horizontal-slide.css">
+	
+	<!-- Custom CSS just for this page -->
+	<!--<link rel="stylesheet" href="mapfish.css">-->
+	
+	<script src="../deckjs/modernizr.custom.js"></script>
+</head>
+
+<body class="deck-container">
+
+<div class="slide" id="title">
+	<h1>MapFish - Status Update and Good Practises</h1>
+</div>
+
+<div class="slide" id="camptocamp">
+	<h2>Camptocamp</h2>
+        <img src="c2c-organisation.png"/>
+</div>
+
+<div class="slide" id="history">
+    <h2>A bit of history</h2>
+    <ul>
+        <li>Initiated by Camptocamp in 2007-2008</li>
+        <li>Goal: a framework for developing web-mapping apps</li>
+    </ul>
+    <!--
+    - JavaScript timeline anyone?
+    - We work closely with OpenLayers and GeoExt.
+    -->
+</div>
+
+<div class="id" id="status">
+    <h2>Current status</h2>
+    <ul>
+        <li>MapFish 2.2</li>
+        <li>Solid, used in production in lots of apps</li>
+    </ul>
+</div>
+
+<div class="slide" id="mapfish_project">
+    <h2>The MapFish Project</h2>
+    <p>Three components:
+    <ul>
+        <li>The Python framework, based on Pylons</li>
+        <li>The Ruby framework, for RoR (contribued by Pirmin Kalberer)</li>
+        <li>The Java Print module</li>
+    </ul>
+    <!--
+    - Independent life cycles
+    - The Print module is used by lots of people, and specific GeoExt
+      components were developed, and have been used for some time now.
+    -->
+</div>
+
+<div class"slide" id="highlights">
+    <h1>Highlights of the year</h1>
+</div>
+
+<div class="slide" id="osgeo">
+    <h2>OSGeo incubation</h2>
+    <p>Coming to an end...</p>
+</div>
+
+<div class="slide" id"community">
+    <h2>Community</h2>
+    <p>Written community processes</p>
+    <!--
+    - Tim Heuer is a new committer
+    - People using MapFish and interested in participating in the dev of
+      the project please come talk to us. We"re very open.
+    -->
+</div>
+
+<div class="slide" id="releases">
+    <h2>Releases</h2>
+    <h3>2.1</h3>
+    <ul>
+        <li>Improved bulk insert performance</li>
+    </ul>
+    <h3>2.2</h3>
+    <ul>
+        <li>Support for SQLAlchemy 0.7 and GeoAlchemy 0.6</li>
+    </ul>
+</div>
+
+<div class="slide" id="maofishsampl">
+    <h2>MapFishSample</h2>
+    <p>A new demo application was developed.</p>
+    <p><a href="http://demo.mapfish.org/mapfishsample/2.2">http://demo.mapfish.org/mapfishsample/2.2</a><:p>
+</div>
+
+<div class="slide" id="camptocamp_recommendations">
+    <h1>Camptocamp recommendations</h1>
+    <!--
+     - There are many ways to develop MapFish apps
+     - This what we use and recommend
+     - See the MapFishSample tutorial
+    -->
+</div>
+
+<div class="slide" id="buildout">
+    <h2>Buildout</h2>
+    <p>Recipes we use include:
+    <ul>
+        <li>JSTools:buildjs</li>
+        <li>z3c.recipe.filetemplate</li>
+        <li>collective.recipe.modwsgi</li>
+
+    </ul>
+    </p>
+    <p>Recipes we created:
+    <ul>
+        <li>c2c.recipe.cssmin</li>
+        <li>c2c.recipe.jarfile</li>
+        <li>c2c.recipe.msgfmt</li>
+    </ul>
+    All on <a href="http://github.com/camptocamp/">http://github.com/camptocamp</a>
+    </p>
+    <!--
+    - Reproducible installations
+    TODO
+    - Regarder la presentation de Bearstech
+    - Donner les avantages
+    -->
+</div>
+
+<div class="slide" id="modwsgi">
+    <h2>Apache modwsgi</h2>
+    <p>MapFish apps can be executed by any WSGI server</p>
+    <p>We use Apache modwsgi</p>
+    <!--
+    TODO
+    Reprendre les slides de l'auteur
+    Donner les avantages
+    Use collective.eggproxy
+    -->
+</div>
+
+<div class="slide" id="repoze">
+    <h2>repoze.who|what</h2>
+    <p>The WSGI security toolkit that has become the most pupular for Pylons.</p>
+    <p>Advantages:
+    <ul>
+        <li>Very flexible</li>
+        <!--
+        You can easily implement custom components.
+        -->
+        <li>Lots of plugins available (for LDAP, CAS, etc.)</li>
+    <ul>
+</div>
+
+<div class="slide" id="whatsnext">
+    <h1>What's next?</h1>
+</div>
+
+<div class="slide" id="pyramid">
+    <h2>Pyramid</h2>
+    <p>Pylons replaced by Pyramid</p>
+    <!--
+    - the Repoze and Pylons communities decided to merge. The name
+      of the resulting community is Pylons. The new framework
+      supported by the Pylons community is Pyramid.
+    -->
+    <p>MapFish certainly needs to go there</p>
+    <p>MapFish 3? To be determined...</p>
+</div>
+    
+<div class="slide" id="contact">
+	<h2>Contact</h2>
+	<p>
+		<h4>Camptocamp SA</h4>
+		<address>
+			PSE-A<br/>
+			Parc Scientific EPFL<br/>
+			1015 Lausanne<br/>
+			Switzerland
+		</address>
+		<a href="http://www.camptocamp.com/">www.camptocamp.com</a><br/>
+		<a href="email:info@camptocamp.com">info@camptocamp.com</a><br/>
+		<a class="tel" href="tel:+41216191010">+41 21 619 10 10</a>
+	</p>
+	<p>
+		<h4>Eric Lemoine</h4>
+		<a href="email:eric.lemoine@camptocamp.com">eric.lemoine@camptocamp.com</a><br/>
+		<a class="tel" href="tel:+41216191013">+41 21 619 10 13</a>
+	</p>
+</div>
+
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<form action="." method="get" class="goto-form">
+	<label for="goto-slide">Go to slide:</label>
+	<input type="number" name="slidenum" id="goto-slide">
+	<input type="submit" value="Go">
+</form>
+
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.js"></script>
+<script>window.jQuery || document.write('<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.1.min.js">\x3C/script>')</script>
+
+<!-- Deck Core and extensions -->
+<script src="../deckjs/core/deck.core.js"></script>
+<script src="../deckjs/extensions/menu/deck.menu.js"></script>
+<script src="../deckjs/extensions/goto/deck.goto.js"></script>
+<script src="../deckjs/extensions/navigation/deck.navigation.js"></script>
+<script src="../deckjs/extensions/hash/deck.hash.js"></script>
+
+<!-- Specific to this page -->
+<script src="mapfish.js"></script>
+
+</body>
+</html>
