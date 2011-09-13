@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="deckjs/core/deck.core.css">
     <link rel="stylesheet" href="deckjs/extensions/navigation/deck.navigation.css">
     <link rel="stylesheet" href="deckjs/extensions/goto/deck.goto.css">
+    <link rel="stylesheet" href="deckjs/extensions/hash/deck.hash.css">
 
     <link rel="stylesheet" href="deckjs/themes/style/swiss.css">
     <link rel="stylesheet" href="deckjs/themes/transition/horizontal-slide.css">
@@ -28,7 +29,7 @@
 </head>
 
 <body class="deck-container">
-        <div class="slide">
+        <div class="slide" id="frontpage">
             <h1>OpenLayers Mobile</h1>
             <ul class="authors">
                 <li>Tim Schaub (OpenGeo)</li>
@@ -36,7 +37,7 @@
             </ul>
         </div>
 
-        <div class="slide">
+        <div class="slide" id="codesprint">
             <h2>Lausanne Code Sprint</h2>
             <img src="code_sprint.jpg" alt="sprinters">
             <!-- Speaker notes:
@@ -48,7 +49,7 @@
             -->
         </div>
 
-        <div class="slide">
+        <div class="slide" id="whatsnew">
             <h2>So what's new?</h2>
             <p>Touch events support across the library!</p>
             <ul>
@@ -70,7 +71,7 @@
             <ul>
         </div>
 
-        <div class="slide">
+        <div class="slide" id="controls">
             <h2>Controls and Handlers</h2>
             <p>New:</p>
             <pre>OpenLayers.Handler.Pinch
@@ -88,7 +89,7 @@ OpenLayers.Control.DragFeature</pre>
             </pre>
         </div>
 
-        <div class="slide">
+        <div class="slide" id="designchoice">
             <h2>Design choice</h2>
             <p><em>One Web</em>? <a href='http://www.alistapart.com/articles/responsive-web-design/'><em>Responsive Web Design</em></a>?</p>
             <p>Still unclear...<p>
@@ -108,7 +109,7 @@ OpenLayers.Control.DragFeature</pre>
 
         </div>
 
-        <div class="slide">
+        <div class="slide" id="dev1">
             <h2>Web Mobile Development</h2>
             <p>... is hard!</p>
             <p>Designing UIs is hard
@@ -127,7 +128,7 @@ OpenLayers.Control.DragFeature</pre>
             -->
         </div>
 
-        <div class="slide">
+        <div class="slide" id="dev2">
             <h2>Web Mobile Development (cont'd)</h2>
             <p>Debugging is hard
                 <ul>
@@ -150,12 +151,12 @@ OpenLayers.Control.DragFeature</pre>
             <p>Specific practices needed: <a href="http://www.w3.org/TR/mwabp/">http://www.w3.org/TR/mwabp/</a></p>
         </div>
 
-        <div class="slide">
+        <div class="slide" id="goodaspects">
             <h2>But it has good aspects</h2>
             <img src="goodbye-ie6.png" alt="goodbye IE6"/>
         </div>
 
-        <div class="slide">
+        <div class="slide" id="fun">
             <h2>And it's fun</h2>
             <img src="css-3.jpg" alt="CSS3"/>
             <img src="html5-display.png" alt=HTML5"/>
@@ -176,6 +177,7 @@ OpenLayers.Control.DragFeature</pre>
 <script src="deckjs/core/deck.core.js"></script>
 <script src="deckjs/extensions/navigation/deck.navigation.js""></script>
 <script src="deckjs/extensions/goto/deck.goto.js""></script>
+<script src="deckjs/extensions/hash/deck.hash.js""></script>
 <script>
     $(function() {
         $.deck('.slide');
